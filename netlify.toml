@@ -1,2 +1,161 @@
 [build]
   publish = "."
+
+# Old WordPress URLs that are not part of this site.
+# The public pages /, /ivm-messenger/, /tcm-messenger/, and /customer-sign-up/ are unchanged.
+
+[[redirects]]
+  from = "/"
+  to = "/ivm-messenger/"
+  status = 301
+  force = true
+  query = {p = "67"}
+
+[[redirects]]
+  from = "/"
+  to = "/tcm-messenger/"
+  status = 301
+  force = true
+  query = {p = "80"}
+
+[[redirects]]
+  from = "/"
+  to = "/customer-sign-up/"
+  status = 301
+  force = true
+  query = {p = "89"}
+
+[[redirects]]
+  from = "/index.php"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/feed"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/feed/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/comments/feed"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/ivm-messenger/feed"
+  to = "/ivm-messenger/"
+  status = 301
+
+[[redirects]]
+  from = "/tcm-messenger/feed"
+  to = "/tcm-messenger/"
+  status = 301
+
+[[redirects]]
+  from = "/customer-sign-up/feed"
+  to = "/customer-sign-up/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-json"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-json/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-login.php"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-admin"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-admin/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/xmlrpc.php"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-sitemap.xml"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-sitemap.xsl"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-sitemap-index.xsl"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-sitemap-posts-page-1.xml"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-content/uploads/2024/01/CustomerSignup.pdf"
+  to = "/files/CustomerSignup.pdf"
+  status = 301
+
+[[redirects]]
+  from = "/wp-content/uploads/2024/01/AnswerFloridaLogo-scaled.jpg"
+  to = "/images/banner.jpg"
+  status = 301
+
+[[redirects]]
+  from = "/wp-content/uploads/2024/01/AnswerFloridaLogo-300x31.jpg"
+  to = "/images/banner.jpg"
+  status = 301
+
+[[redirects]]
+  from = "/wp-content/uploads/2024/01/AnswerFloridaLogo-768x79.jpg"
+  to = "/images/banner.jpg"
+  status = 301
+
+[[redirects]]
+  from = "/wp-content/uploads/2024/01/AnswerFloridaLogo-1024x105.jpg"
+  to = "/images/banner.jpg"
+  status = 301
+
+[[redirects]]
+  from = "/wp-content/uploads/2024/01/AnswerFloridaLogo-1536x157.jpg"
+  to = "/images/banner.jpg"
+  status = 301
+
+[[redirects]]
+  from = "/wp-content/uploads/2024/01/AnswerFloridaLogo-2048x210.jpg"
+  to = "/images/banner.jpg"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    Strict-Transport-Security = "max-age=31536000"
+    Content-Security-Policy-Report-Only = "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
